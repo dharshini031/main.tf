@@ -51,7 +51,7 @@ resource "docker_container" "nginx" {
     external = 8080
   }
 }
-#deploy resource
+# deploy resource
 resource "docker_network" "private_network" {
   name = "my_network"
 }
@@ -65,7 +65,7 @@ resource "docker_volume" "shared_volume" {
   name = "shared_volume"
 }
 
-#The source image must exist on the machine running the docker daemon.
+# The source image must exist on the machine running the docker daemon.
 resource "docker_tag" "tag" {
   source_image = "xxxx"
   target_image = "xxxx"
